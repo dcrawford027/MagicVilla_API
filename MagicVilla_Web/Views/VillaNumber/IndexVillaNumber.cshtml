@@ -10,27 +10,27 @@
             <a asp-controller="VillaNumber" asp-action="CreateVillaNumber" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"></i> Create New Villa Number</a>
         </div>
     </div>
-</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Villa Name</th>
-            <th>Villa Number</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@item.Villa.Name</td>
-                <td>@item.VillaNo</td>
-                <td>
-                    <a asp-controller="VillaNumber" asp-action="UpdateVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
-                    <a asp-controller="VillaNumber" asp-action="DeleteVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
-                </td>
+                <th>Villa Name</th>
+                <th>Villa Number</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Villa.Name</td>
+                    <td>@item.VillaNo</td>
+                    <td>
+                        <a asp-controller="VillaNumber" asp-action="UpdateVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-controller="VillaNumber" asp-action="DeleteVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
